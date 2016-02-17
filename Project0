@@ -1,0 +1,26 @@
+public class Project0 {
+	public static void main(String[] args) {
+		while(true){
+			String sentence;
+			sentence = JOptionPane.showInputDialog(null, "Enter a sentence: ");
+			// if the inputWord is contained within wordArray return true
+			int numlowerE=lowercaseE(sentence);
+			int numupperE=uppercaseE(sentence);
+			JOptionPane.showMessageDialog(null, "There are" + numlowerE + "lower case E's and" + numupperE + "uppercase E's.");
+		}
+	}
+	public static int lowercaseE(String in) {
+		int x=0;
+		for(int i=0; i<in.length(); i++){
+			if(in.charAt(i)=='e') x++;
+		}
+		return x;
+	}  //wordIsThere
+	public static int uppercaseE(String in) {
+		int x=0;
+		for(int i=0; i<in.length(); i++){
+			if(in.charAt(i)=='E') x++;
+		}
+		return x;
+	} // wordIsThere
+}
